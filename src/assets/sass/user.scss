@@ -1,0 +1,50 @@
+.user-container {
+  .user-detail-wrap {
+    padding: .2rem 0 .38rem;
+  }
+  .user-logo {
+    width: .6rem;
+    height: .6rem;
+  }
+  .sign-in {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: .05rem .2rem;
+    border: 1px solid $theme-color;
+    color: $theme-color;
+    border-radius: .12rem;
+  }
+}
+.user-item {
+  height: .52rem;
+  padding-left: .14rem;
+  align-items: center;
+  display: flex;
+  .user-item-icon {
+    width: .5rem;
+    text-align: center;
+    color: $theme-color;
+    .iconfont {
+      font-size: .2rem;
+    }
+  }
+  .user-item-detail {
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(#3f424b, .3);
+    padding-right: .3rem;
+    color: #fff;
+    .label {
+      font-size: .14rem;
+    }
+    .right {
+      color: $icon-color;
+    }
+  }
+  &:last-child {
+    .user-item-detail {
+      border: none;
+    }
+  }
+}

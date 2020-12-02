@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/sass/index.scss'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'swiper/swiper.scss'
 
 ReactDOM.render(
   <React.StrictMode>

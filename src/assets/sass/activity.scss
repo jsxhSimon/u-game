@@ -1,0 +1,24 @@
+.activity {
+  height: 100%;
+}
+.activity-item {
+  height: 1.7rem;
+  background-color: $match-bg;
+  box-shadow: 0 .1rem .5rem 0 rgba(48, 48, 48, 0.2);
+  margin-top: .08rem;
+  box-sizing: border-box;
+  padding: .12rem .3rem;
+  .activity-pic {
+    height: .9rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ededed;
+  }
+  .act-name {
+    color: $text-color;
+    line-height: .18rem;
+    .iconfont {
+      font-size: .12rem;
+    }
+  }
+}
