@@ -19,7 +19,7 @@ const List: React.FC<ListProps> = (props) => {
           icon
         }
       </div>
-      <div className="user-item-detail flex align-items-center space-between" onClick={() => path && history.push(path)}>
+      <div className="user-item-detail flex align-items-center flex-between" onClick={() => path && history.push(path)}>
         <span className="label">{label}</span>
         <div className="right flex align-items-center">
           <span className="text mr-12">

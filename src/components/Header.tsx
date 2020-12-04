@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = (props) => {
               ? <div className="title">{title}</div>
               : hideLogo ? null : <div className="logo"></div>
           }
-          <div className="flex space-between align-items-center fr">
+          <div className="flex flex-between align-items-center fr">
             {
               rightContent
             }

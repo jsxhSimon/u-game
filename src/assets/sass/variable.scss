@@ -1,9 +1,14 @@
-$theme-color: #00fff6;
+$theme-color: #20FFFF;
 $text-color: #a2a8ba;
 $bg-color: #0b0c0d;
 $assetPath: '~src/assets/images/';
 $logo-img: '#{$assetPath}logo.png';
-$match-bg: #15171a;
+$match-bg: #191B1F;
 $white-color: #fff;
 $border-color: rgba(#969baf, .2);
-$icon-color: #7b7c80;
+$icon-color: #C9C9C9;
+
+@mixin bg($url, $size: contain) {
+  background: url($url) no-repeat center center;
+  background-size: $size;
+}

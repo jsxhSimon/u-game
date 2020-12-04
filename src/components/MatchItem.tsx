@@ -10,7 +10,7 @@ const MatchItem: React.FC<MatchItemProps> = (props) => {
   const { match } = props
   return (
     <div className="match-item">
-      <div className="match-item-header flex align-items-center space-between">
+      <div className="match-item-header flex align-items-center flex-between">
         <div className="flex align-items-center">
           <div className="match-type-logo" style={{backgroundImage: `url(${match.CategoryPic})`}}></div>
           <div className="type-name">{match.LeagueName}</div>

@@ -88,7 +88,7 @@ const App: React.FC = () => {
     }
   }
   return (
-    <div className="home page" ref={homeRef}>
+    <div className="home page pd-header-footer" ref={homeRef}>
       {
         getHeader()
       }

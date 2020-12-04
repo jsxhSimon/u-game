@@ -3,9 +3,9 @@ import { Carousel } from 'antd-mobile'
 
 const Notice: React.FC = () => {
   return (
-    <div className="notice">
-      <div className="wrap flex align-items-center space-between">
-        <span className="iconfont fs-20 mr-6 icon-guangbo"></span>
+    <div className="notice ptb-8">
+      <div className="wrap flex align-items-center flex-between">
+        <span className="iconfont fs-16 mr-6 icon-guangbo"></span>
         <div className="div-notice-context">
           <Carousel
             className="notice-carousel"

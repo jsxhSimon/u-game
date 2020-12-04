@@ -1,6 +1,7 @@
 import RouterPage from './router'
 import { useEffect } from 'react'
 import { useStores } from './hooks/useStore'
+import { StoreProvider } from './store'
 
 function App() {
   const { userStore } = useStores()
@@ -9,7 +10,9 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <RouterPage />
+      <StoreProvider>
+        <RouterPage />
+      </StoreProvider>
     </div>
   );
 }

@@ -44,15 +44,13 @@ const Login = () => {
                 }
                 userStore.getUserInfo()
                 userStore.getIsFundsPwd()
-                if (res.state) {
-                  setTimeout(() => {
-                    if (location.search) {
-                      history.replace('/' + location.search.split('=')[1])
-                    } else {
-                      history.replace('/')
-                    }
-                  }, 400)
-                }
+                setTimeout(() => {
+                  if (location.search) {
+                    history.replace('/' + location.search.split('=')[1])
+                  } else {
+                    history.replace('/')
+                  }
+                }, 400)
               })
           } else {
             if (once) {

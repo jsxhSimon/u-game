@@ -49,7 +49,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Notice />
-      <div className="main mt-10">
+      <div className="main">
         <Banner list={bannerList} />
       </div>
       <div className="title mt-20 mb-14 wrap">
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         >
           {
             hotMatchList.map((match, index) => {
-              return <div className={`hot-match-item flex space-between align-items-center ${hotMatchIndex === index ? 'active' : ''}`} key={match.id}>
+              return <div className={`hot-match-item flex flex-between align-items-center ${hotMatchIndex === index ? 'active' : ''}`} key={match.id}>
                 <div className="game-type"></div>
                 <div className="match-detail">
                   <h3 className="title mb-6">{match.title}</h3>
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                     {dayjs.unix(match.matchTime).format('YYYY-MM-DD hh:mm:ss')}
                   </div>
                   <div className="line mt-10"></div>
-                  <div className="teams flex space-between align-items-center">
+                  <div className="teams flex flex-between align-items-center">
                     <div className="team">
                       <UWImage
                         className="logo"

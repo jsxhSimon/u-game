@@ -71,7 +71,16 @@ interface UserInfo {
   /** 异地登录 需要验证手机尾号 */
   tailNumber: string;
   isFundsPwd: boolean;
-  current_grade: CurrentGrade
+  current_grade: CurrentGrade;
+  setUserInfo: Function;
+  getUserInfo: Function;
+  getIsFundsPwd: Function;
 }
 
 type SubsetOfUserInfo = Partial<UserInfo>
+
+interface HttpResult {
+  data: any;
+  message: string;
+  state: boolean;
+}

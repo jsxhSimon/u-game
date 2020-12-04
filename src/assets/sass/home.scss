@@ -4,11 +4,6 @@
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
-  .main-container {
-    padding-top: .5rem;
-    padding-bottom: .72rem;
-    box-sizing: border-box;
-  }
 }
 .banner {
   height: 1.69rem;
@@ -52,7 +47,7 @@
     .game-type {
       width: .92rem;
       height: 1.28rem;
-      background: #ccc;
+      @include bg('~@/assets/images/hone_rmss_yxlm@2x.png');
       transform: scale(.8);
       transform-origin: 0 50% 0;
     }
@@ -115,8 +110,8 @@
   width: .96rem;
   height: 1.29rem;
   box-sizing: border-box;
-  background-color: #1e2639;
   box-shadow: 0 .03rem .06rem 0 rgba(0, 0, 0, .16);
+  @include bg('~@/assets/images/hone_zjyx_bg@2x.png');
   text-align: center;
   font-size: .13rem;
   color: $white-color;
@@ -168,51 +163,7 @@
   }
 }
 
-footer {
-  text-align: center;
-  height: .66rem;
-  box-sizing: border-box;
-  padding: .12rem 0 .12rem;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-  transition: .2s;
-  &.in-bottom {
-    background: $bg-color;
-  }
-  &:not(.in-bottom):after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(40, 42, 54, 0.9);
-    filter: blur(1px);
-  }
-  .iconfont {
-    font-size: .24rem;
-  }
-  .am-flexbox {
-    position: absolute;
-    width: 100%;
-    top: .12rem;
-    z-index: 2;
-    .am-flexbox-item {
-      margin-left: 0;
-      text-align: center;
-      a {
-        color: $text-color;
-        display: block;
-        &.active {
-          color: $theme-color;
-        }
-      }
-    }
-  }
-}
+
 .side-bar {
   position: fixed;
   width: 100%;

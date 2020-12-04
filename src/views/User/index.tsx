@@ -3,11 +3,11 @@ import React from 'react'
 import UWImage from '@/components/UWImage'
 import ListItem from '@/components/ListItem'
 import KeFu from '@/components/KeFuIcon'
-import { useStores } from '@/hooks/useStore'
+import { useStores } from '@/hooks/useUserStore'
 
 const User = () => {
   const { userStore } = useStores()
-  const userInfo = userStore.userInfo
+
   return (
     <div className="user page">
       <Header
@@ -15,7 +15,7 @@ const User = () => {
         rightContent={[<span className="iconfont icon-shezhi mr-16"></span>, <KeFu />]} />
       <div className="user-container">
         <div className="match-bg">
-          <div className="wrap flex space-between align-items-end user-detail-wrap">
+          <div className="wrap flex flex-between align-items-start user-detail-wrap">
             <div className="user-detail flex align-items center">
               <UWImage
                 className="user-logo"
@@ -27,7 +27,7 @@ const User = () => {
                 <p className="level lh-20 mt-6 icon-color">{userInfo.current_grade.code}</p>
               </div>
             </div>
-            <div className="sign-in btn mb-6">签到</div>
+            <div className="sign-in btn mt-6">签到</div>
           </div>
         </div>
         <div className="mt-6">
