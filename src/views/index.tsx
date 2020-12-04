@@ -6,7 +6,7 @@ import {
   useLocation,
   useHistory
 } from 'react-router-dom'
-import { useStores } from '@/hooks/useStore'
+import useStore from '@/hooks/useStore'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Home from './Home'
@@ -24,7 +24,7 @@ const App: React.FC = () => {
   let { path } = useRouteMatch()
   let location = useLocation()
   let history = useHistory()
-  const { userStore } = useStores()
+  const userStore = useStore()
   useEffect(() => {
     const mainScroll = (e) => {
       if (e.target.scrollTop > 10) {
@@ -49,7 +49,7 @@ const App: React.FC = () => {
     switch (location.pathname) {
       case '/home':
         let rightContent
-        if (userStore.userInfo.login) {
+        if (userStore.login) {
           rightContent = [<KeFu />]
         } else {
           rightContent = [

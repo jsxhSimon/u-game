@@ -1,4 +1,5 @@
-export default {
+
+const api = {
   // 首页 -> 热门赛事
   featuredEvent: '/Index/featuredMatch',
   // 全局分类配置
@@ -21,4 +22,6 @@ export default {
   Isset: '/User/Isset',
   userBalance: '/User/Balance',
 }
+
+export default api
 

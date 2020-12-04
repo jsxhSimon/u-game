@@ -14,9 +14,11 @@ const UWImage: React.FC<UWImageProps> = (props) => {
     if (!url) return
     let img = new Image()
     img.src = url
-    img.onload = function () {
+    const imgLoad = () => {
       setSucImg(url)
     }
+    img.addEventListener('load', imgLoad)
+    return () => img.removeEventListener('load', imgLoad)
   }, [url])
   return (
     <div className={`uw-img ${type ? `default-${type}` : 'default-team'} ${className}`} style={sucImg ? {backgroundImage: `url(${sucImg})`} : {}}></div>

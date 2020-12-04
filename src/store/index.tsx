@@ -1,16 +1,11 @@
-import React, { Context, createContext } from 'react'
-import useUserStore from '@/hooks/useUserStore'
+import React, { createContext } from 'react'
+import userStore from './userStore'
 
-interface StoreContextState {
-  userStore: UserInfo
-}
-
-export const StoreContext = createContext<StoreContextState>(null)
+export const StoreContext = createContext(userStore)
 
 export const StoreProvider: React.FC = ({children}) => {
-  const [userStore] = useUserStore()
   return (
-    <StoreContext.Provider value={{userStore}}>
+    <StoreContext.Provider value={userStore}>
       {children}
     </StoreContext.Provider>
   )

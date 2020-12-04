@@ -14,7 +14,7 @@ const Wallet = lazy(() => import('@/views/User/Wallet'))
 const Register = lazy(() => import('@/views/Register'))
 const Service = lazy(() => import('@/views/Service'))
 
-export default () => {
+const RouterPage = () => {
   return (
     <Router>
       <Suspense fallback={<div className="loading"></div>}>
@@ -38,3 +38,5 @@ export default () => {
     </Router>
   )
 }
+
+export default RouterPage

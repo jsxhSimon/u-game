@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import { useStores } from '@/hooks/useStore'
+import useStore from '@/hooks/useStore'
+import { observer } from 'mobx-react'
 
 interface PrivateRouteProps {
   path: string;
@@ -9,11 +10,11 @@ interface PrivateRouteProps {
 
 const PrivateRoute: React.FC<PrivateRouteProps> = (props) => {
   const { path, component } = props
-  const { userStore } = useStores()
+  const userStore = useStore()
   return (
     <Route path={path}>
       {
-        userStore.userInfo.login
+        userStore.login
           ? component
           : <Redirect to="/login" />
       }
@@ -21,4 +22,4 @@ const PrivateRoute: React.FC<PrivateRouteProps> = (props) => {
   )
 }
 
-export default PrivateRoute
+export default observer(PrivateRoute)

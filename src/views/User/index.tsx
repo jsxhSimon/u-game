@@ -3,10 +3,12 @@ import React from 'react'
 import UWImage from '@/components/UWImage'
 import ListItem from '@/components/ListItem'
 import KeFu from '@/components/KeFuIcon'
-import { useStores } from '@/hooks/useUserStore'
+import useStore from '@/hooks/useStore'
+import { observer } from 'mobx-react'
 
 const User = () => {
-  const { userStore } = useStores()
+  const userStore = useStore()
+  console.log(userStore)
 
   return (
     <div className="user page">
@@ -23,8 +25,8 @@ const User = () => {
                 type="user"
               />
               <div className="ml-18 lh-24 mt-4">
-                <p className="title">{userInfo.UserName}</p>
-                <p className="level lh-20 mt-6 icon-color">{userInfo.current_grade.code}</p>
+                <p className="title">{userStore.UserName}</p>
+                <p className="level lh-20 mt-6 icon-color">{userStore.current_grade.code}</p>
               </div>
             </div>
             <div className="sign-in btn mt-6">签到</div>
@@ -79,4 +81,4 @@ const User = () => {
   )
 }
 
-export default User
+export default observer(User)

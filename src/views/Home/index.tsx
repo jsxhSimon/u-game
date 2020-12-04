@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 import UWImage from '@/components/UWImage'
 import Swiper from 'swiper'
 import MatchItem from '@/components/MatchItem'
-import SideBar from '@/components/SideBar'
+// import SideBar from '@/components/SideBar'
 
 const Home: React.FC = () => {
   const [bannerList, setBannerList] = useState<Banner[]>([])
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       </div>
       <div className="recommend-match">
         {
-          scrollBallRecords.filter(item => {if(scrollBollMatches[item]) return true}).slice(0, 6).map(attr => {
+          scrollBallRecords.filter(item => scrollBollMatches[item]).slice(0, 6).map(attr => {
             return <MatchItem match={scrollBollMatches[attr]} key={attr}/>
           })
         }

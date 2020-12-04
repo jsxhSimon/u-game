@@ -29,6 +29,7 @@ const createTodoStore = () => {
         })
     }
   })
+  return store
 }
 
 export default createTodoStore()

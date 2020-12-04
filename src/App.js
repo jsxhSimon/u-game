@@ -1,10 +1,9 @@
 import RouterPage from './router'
 import { useEffect } from 'react'
-import { useStores } from './hooks/useStore'
 import { StoreProvider } from './store'
+import userStore from './store/userStore'
 
 function App() {
-  const { userStore } = useStores()
   useEffect(() => {
     userStore.getUserInfo()
   }, [])
